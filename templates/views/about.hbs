@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{>css_links}}
+        <script type="text/javascript" src="/js/app.js"></script>
+        <title>Weather nodes</title>
+    </head>
+    <body>
+        {{>header}}
+        <section class="page-content">
+            <img src="/img/me.jpg" class="me-img">  
+            <p>Created by <a href="https://github.com/MykhailKo/nodejs-weather-website/">{{name}}</a></p>
+            <p class="about">Weather Nodes is a weather application created in <b>Node.js</b>, running on <b>Express</b> web-server. 
+                Weather Nodes uses third party REST APIs to get data, such as <b>Weatherstack</b> API for fetching forecasts
+                and <b>MapBox API</b> for geocoding locations by names. Weather Nodes does not consider any commercial interest
+                and was developed on studying purposes only. </p>
+        </section>
+        {{>footer}}
+    </body>
+</html>

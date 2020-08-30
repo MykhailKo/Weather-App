@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{>css_links}}
+        <script type="text/javascript" src="/js/app.js"></script>
+        <title>Weather nodes</title>
+    </head>
+    <body>
+        <div class="main-bg"></div>
+        {{>header}}
+        <section class="page-content">
+            <div class="weather-search">
+                <input type="text" placeholder="Search location">
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="location-props">
+                <div class="location-time"><i class="fa fa-clock-o"></i><span></span></div>
+                <div class="location-place"><i class="fa fa-map-marker"></i><span></span></div>
+            </div>
+            <ul class="nodes-list">
+                <div class="weather-node" id="weather"><span class="node-icon"></span>
+                    <div class="node-content">
+                        <li id="weather-icon"></li>
+                        <li id="description"></li>
+                        <li id="temperature"><i class="fa fa-thermometer-half"></i><span></span></li>
+                        <li id="feelslike"><i class="fa fa-hand-paper-o"></i><span></span></li>
+                    </div>
+                </div>
+                <div class="weather-node" id="rain"><span class="node-icon"></span>
+                    <div class="node-content">
+                        <li id="humidity"><i class="fa fa-tint"></i><span></span></li>
+                        <li id="cloudcover"><i class="fa fa-cloud"></i><span></span></li>
+                        <li id="precip">precip level: <span></span></li>
+                    </div>
+                </div>
+                <div class="weather-node" id="wind"><span class="node-icon"></span>
+                    <div class="node-content">
+                        <li id="wind-dir"><i class="fa fa-compass"></i><span></span></li>
+                        <li id="wind-speed"><i class="fa fa-arrow-right"></i><span></span></li>
+                        <li id="pressure"><i class="fa fa-tachometer"></i><span></span></li>
+                    </div>
+                </div>
+            </ul>
+        </section>
+        {{>footer}}
+    </body>
+</html>

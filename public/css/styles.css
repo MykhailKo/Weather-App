@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+a {
+    color: #4267b2;
+}
+h1 {
+    color: #4267b2;
+    font-family: 'Poppins';
+}
+p {
+    font-family: 'Poppins';
+    color: #4267b2;
+    margin-left: 3em;
+}
+.me-img {
+    max-width: 10em;
+    max-height: 15em;
+    margin: 1em 3em;
+}
+.about {
+    max-width: 35em;
+    margin: 1em 3em;
+}
+.page-content {
+    position: relative;
+    z-index: 5;
+    padding: 1.5em;
+    padding-top: 7em;
+    min-height: 100vh;
+}
+.main-bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bg/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s background;
+}
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 4.5em;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #4267b2;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff;
+    z-index: 6;
+}
+.logo-block {
+    display: flex;
+    align-items: center;
+}
+.logo-block h1 {
+    font-size: 1.7em;
+    margin-left: 0.6em;
+    color: #fff;
+}
+.logo {
+   width: 4em;
+   height: 4em;
+   background-image: url(../img/logo.png);
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat; 
+}
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    width: 70vw;
+    align-items: center;
+}
+.menu a {
+    font-family: 'Poppins';
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-right: 1em;
+}
+.breadcrums {
+    position: absolute;
+    margin-top: 6.5em;
+    color: #4267b2;
+    font-size: 1em;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+.breadcrums li {
+    list-style-type: '/';
+    margin-right: 0.5em;
+    font-family: 'Poppins';
+    padding-left: 0.5em;
+}
+.breadcrums i {
+    font-size: 1.2em;
+    margin-right: 0.8em;
+}
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    padding: 1em 3em;
+    z-index: 5;
+}
+.footer p {
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    color: #010155;
+}
+.error-block {
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.weather-search {
+    display: flex;
+    width: 30em;
+    height: 4em;
+    margin: 2em auto;
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff;
+    border-radius: 0.7em;
+    overflow: hidden;
+}
+.weather-search input {
+    width: 85%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #4267b2;
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    padding: 0 0.5em;
+}
+.search-btn {
+    width: 15%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #4267b2;
+    color: #fff;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+.nodes-list {
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 6em 0 4em;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3em;
+}
+.weather-node {
+    position: relative;
+    width: 20em;
+    height: 20em;
+    background-image: url(../img/node.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.node-icon {
+    width: 8em;
+    height: 8em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+#weather .node-icon {
+    background-image: url(../img/temperature.png);
+}
+#rain .node-icon {
+    background-image: url(../img/rain.png);
+}
+#wind .node-icon {
+    background-image: url(../img/wind.png);
+}
+.node-icon-small {
+    position: absolute;
+    top: 0.7em;
+    width: 4em;
+    height: 4em;
+}
+.node-content {
+    width: 100%;
+    height: 11em;
+    display: none;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    margin-top: 1em;
+}
+.node-content li {
+    list-style: none;
+    color: #4267b2;
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+#description {
+    max-width: 8em;
+    text-align: center;
+}
+#temperature, #feelslike {
+    height: 3em;
+}
+#precip span {
+    padding-left: 0.5em;
+}
+#weather-icon {
+    width: 4em;
+    height: 4em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.node-content li i {
+    font-size: 1.3em;
+    padding-right: 0.5em;
+}
+.location-props {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.location-time, .location-place {
+    color: #fff;
+    font-size: 1.3em;
+    font-family: 'Poppins';
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+}
+.location-props i {
+    margin-right: 0.6em;
+    font-size: 1.4em;
+}
